@@ -1,0 +1,50 @@
+# Xcode
+DerivedData/
+build/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+
+# User-specific Xcode settings
+*.xcuserdatad/
+xcuserdata/
+
+# Swift Package Manager
+.build/
+.build/*
+.swiftpm/
+Package.resolved
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output/
+
+# Archives
+*.xcarchive
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Provisioning / signing
+*.mobileprovision
+*.p12
+
+# Temporary files
+*.tmp
+*.temp
