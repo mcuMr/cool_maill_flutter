@@ -1,7 +1,7 @@
-import 'package:cool_maill_flutter/features/cart/cart_screen.dart';
-import 'package:cool_maill_flutter/features/category/category_screen.dart';
-import 'package:cool_maill_flutter/features/home/home_screen.dart';
-import 'package:cool_maill_flutter/features/mine/mine_screen.dart';
+import 'package:cool_mail/features/cart/cart_screen.dart';
+import 'package:cool_mail/features/category/category_screen.dart';
+import 'package:cool_mail/features/home/home_screen.dart';
+import 'package:cool_mail/features/mine/mine_screen.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {

@@ -1,7 +1,7 @@
-import 'package:cool_maill_flutter/app/router/route_name.dart';
-import 'package:cool_maill_flutter/features/splash/splash_screen.dart';
-import 'package:cool_maill_flutter/features/main/main_screen.dart';
-import 'package:cool_maill_flutter/features/home/home_screen.dart';
+import 'package:cool_mail/app/router/route_name.dart';
+import 'package:cool_mail/features/splash/splash_screen.dart';
+import 'package:cool_mail/features/main/main_screen.dart';
+import 'package:cool_mail/features/home/home_screen.dart';
 import 'package:go_router/go_router.dart';
 
 final appRouter = GoRouter(

@@ -1,4 +1,4 @@
-import 'package:cool_maill_flutter/app/router/route_name.dart';
+import 'package:cool_mail/app/router/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
