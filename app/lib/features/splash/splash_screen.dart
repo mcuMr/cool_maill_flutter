@@ -26,14 +26,32 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: TextButton(
-            onPressed: () {
-              context.go(mainScreen);
-            },
-            child: const Text('进入主页'),
-          ),
-        ),
+        body: Container(
+          color: Colors.white,
+          alignment: Alignment.center,
+          child:Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment:CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+                Image.asset(
+                'images/ic_logo.png',
+                width: 160,
+                height: 160,
+                ),
+                // SvgPicture.asset(
+                //   'images/ic_logo.xml',
+                //   width: 200,
+                //   height: 200,
+                //   semanticsLabel: 'Dart Logo',
+                // ),
+                Padding(padding: EdgeInsets.only(top: 20)),
+                Text(
+                "CoolMail",
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+            ],),
+        )
       ),
     );
   }

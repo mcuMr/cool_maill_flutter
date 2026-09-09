@@ -1,3 +1,30 @@
 {
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "workbench.tree.indent": 16,
+
+    "files.exclude": {
+        "**/.dart_tool": true,
+        "**/.idea": true,
+        "**/.gradle": true,
+        "**/.git": true,
+        "**/build": true,
+        "**/Pods": true,
+        "**/.symlinks": true,
+        "**/ephemeral": true,
+        "**/.metadata": true
+    },
+
+  "[dart]": {
+
+    "editor.insertSpaces": true,
+
+    "editor.tabSize": 4,
+
+    "editor.indentSize": 4,
+
+    "editor.detectIndentation": false,
+
+    "editor.defaultFormatter": "Dart-Code.dart-code"
+
+  }
 }

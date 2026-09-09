@@ -40,7 +40,7 @@ class _MainScreenState extends State<MainScreen> {
             label: 'Search',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+            icon: Icon(Icons.create_sharp),
             label: 'Search',
           ),
           BottomNavigationBarItem(
