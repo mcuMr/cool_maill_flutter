@@ -7,7 +7,6 @@ import 'package:go_router/go_router.dart';
 final appRouter = GoRouter(
   initialLocation: splashScreen,
   routes: [
-
     // 闪屏页
     GoRoute(
       path: splashScreen,
@@ -15,21 +14,9 @@ final appRouter = GoRouter(
     ),
 
     // 主页面
-    GoRoute(
-      path: mainScreen, 
-      builder: (context, state) => const MainScreen()
-    ),
+    GoRoute(path: mainScreen, builder: (context, state) => const MainScreen()),
 
     // 首页
-    GoRoute(
-      path: homeScreen,
-      builder: (context, state) => const HomeScreen(),
-    ),
-
-    
-
-
-
-
+    GoRoute(path: homeScreen, builder: (context, state) => const HomeScreen()),
   ],
 );

@@ -12,41 +12,28 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-   int _currentIndex = 0;
-   final List<Widget> _pages = <Widget> [
+  int _currentIndex = 0;
+  final List<Widget> _pages = <Widget>[
     HomeScreen(),
     CategoryScreen(),
     CartScreen(),
-    MineScreen()
+    MineScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      body: IndexedStack(
-        index: _currentIndex,
-        children: _pages,
-      ),
+      body: IndexedStack(index: _currentIndex, children: _pages),
 
       bottomNavigationBar: BottomNavigationBar(
         items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
           BottomNavigationBarItem(
             icon: Icon(Icons.create_sharp),
             label: 'Search',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
         currentIndex: _currentIndex,
         selectedItemColor: Colors.blue,
@@ -63,4 +50,3 @@ class _MainScreenState extends State<MainScreen> {
     });
   }
 }
-

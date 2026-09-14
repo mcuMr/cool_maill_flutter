@@ -29,29 +29,26 @@ class _SplashScreenState extends State<SplashScreen> {
         body: Container(
           color: Colors.white,
           alignment: Alignment.center,
-          child:Column(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment:CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
-                Image.asset(
-                'images/ic_logo.png',
-                width: 160,
-                height: 160,
-                ),
-                // SvgPicture.asset(
-                //   'images/ic_logo.xml',
-                //   width: 200,
-                //   height: 200,
-                //   semanticsLabel: 'Dart Logo',
-                // ),
-                Padding(padding: EdgeInsets.only(top: 20)),
-                Text(
+              Image.asset('images/ic_logo.png', width: 160, height: 160),
+              // SvgPicture.asset(
+              //   'images/ic_logo.xml',
+              //   width: 200,
+              //   height: 200,
+              //   semanticsLabel: 'Dart Logo',
+              // ),
+              Padding(padding: EdgeInsets.only(top: 20)),
+              Text(
                 "CoolMail",
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                ),
-            ],),
-        )
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

@@ -26,5 +26,6 @@
 
     "editor.defaultFormatter": "Dart-Code.dart-code"
 
-  }
+  },
+  "commentTranslate.targetLanguage": "zh-CN"
 }

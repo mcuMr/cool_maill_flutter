@@ -1,3 +1,3 @@
 class ErrCode {
-  static int get SUCCESS => 1000;
+  static const int SUCCESS = 1000;
 }

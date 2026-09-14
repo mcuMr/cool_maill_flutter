@@ -1,9 +1,13 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'base_model.g.dart';
 
+Object? _readBaseModelMessage(Map json, String key) =>
+    json['message'] ?? json['msg'] ?? '';
+
 @JsonSerializable(genericArgumentFactories: true)
 class BaseModel<T> {
   final int code;
+  @JsonKey(readValue: _readBaseModelMessage)
   final String message;
   final T? data;
 
