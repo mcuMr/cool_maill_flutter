@@ -20,8 +20,22 @@ class _MineScreenState extends State<MineScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(child: Text(_result?.toString() ?? 'No data available')),
+    return Padding(padding:  EdgeInsets.all(16.0),
+        child: Scaffold(
+            body: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                spacing: 16.0,
+                children: [
+                    // 用户信息
+                    userInfoSection(),
+
+                    userInfoSection(),
+
+                    userInfoSection(),
+
+                ],
+            ),
+            ),
     );
   }
 
@@ -36,4 +50,18 @@ class _MineScreenState extends State<MineScreen> {
       _result = data.data;
     });
   }
+
+  Widget userInfoSection(){
+   return Row(
+        children: [
+            Icon( Icons.on_device_training,),
+            Column(children: [
+                Text("UserName "),
+                Text("UserName 1")
+            ],),
+            Icon( Icons.arrow_right_alt,),
+        ],
+    );
+  }
 }
+

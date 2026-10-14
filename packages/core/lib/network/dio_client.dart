@@ -45,9 +45,7 @@ class DioClient {
           }
 
           String? token = "token"; // 从本地缓存获取 token
-          if (token != null) {
-            options.headers['Authorization'] = 'Bearer $token';
-          }
+          options.headers['Authorization'] = 'Bearer $token';
           return handler.next(options);
         },
         onResponse: (response, handler) {

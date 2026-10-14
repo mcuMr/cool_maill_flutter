@@ -15,17 +15,14 @@
     },
 
   "[dart]": {
-
     "editor.insertSpaces": true,
-
     "editor.tabSize": 4,
-
     "editor.indentSize": 4,
-
     "editor.detectIndentation": false,
-
+    "editor.formatOnSave": false,
     "editor.defaultFormatter": "Dart-Code.dart-code"
-
   },
-  "commentTranslate.targetLanguage": "zh-CN"
+"commentTranslate.targetLanguage": "zh-CN",
+"editor.detectIndentation": false,
+"editor.indentSize": "tabSize"
 }
