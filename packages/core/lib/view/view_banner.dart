@@ -18,12 +18,11 @@ class ViewBanner extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    return ViewBannerState(banners: banners, onImageTap: onImageTap);
+    return ViewBannerState();
   }
 }
 
 class ViewBannerState extends State<ViewBanner> {
-  ViewBannerState({ValueChanged<int>? onImageTap, required List<BannerModel.Banner> banners});
 
    final sliderController = CarouselSliderController();
    int activeIndex = 0;

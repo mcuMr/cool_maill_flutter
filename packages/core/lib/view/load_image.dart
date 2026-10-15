@@ -19,7 +19,8 @@ class LoadImage {
             imageUrl: imageUrl,
             width: width,
             height: height,
-            placeholder: (context, imageUrl) => const CircularProgressIndicator(),
+          fit: BoxFit.cover, // 确保图像在边界内正确裁剪
+          placeholder: (context, imageUrl) => const CircularProgressIndicator(),
             errorWidget: (context, imageUrl, error) => const Icon(Icons.error),
         ),
     );
