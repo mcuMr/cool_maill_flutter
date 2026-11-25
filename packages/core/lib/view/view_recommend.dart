@@ -10,55 +10,53 @@ class ViewRecommend extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-   return Container(
-       decoration: const BoxDecoration(
-         color: Colors.white70,
-         shape: BoxShape.rectangle,
-         borderRadius: BorderRadius.all(Radius.circular(8)),
-       ),
-       padding: const EdgeInsets.all(16),
-       child: getRecommend(),
-   );
+   return getRecommend();
   }
 
   Widget getRecommend() {
     return ListView.separated(
-              shrinkWrap: true,
+      padding: EdgeInsets.zero,
+      shrinkWrap: true,
               scrollDirection: Axis.vertical,
               physics: NeverScrollableScrollPhysics(),
               itemCount: recommend.length, // 列表数据数量
-              separatorBuilder: (context, index) => const Divider(height: 16,color: Colors.black12,),
+              separatorBuilder: (context, index) => const Divider(height: 16,color: Colors.transparent,),
               itemBuilder: (context, index){
                 var item = recommend[index];
-                return SizedBox(
-                  height: 120,
-                  child: Row(
-                    spacing: 12,
-                    children: [
-                      LoadImage.load(imageUrl: item.mainPic??"", height: 120, width: 120),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(item.title??""),
-                            Text(item.subTitle??"",maxLines: 2, overflow: TextOverflow.ellipsis,
-                                style: const TextStyle(fontSize: 13, color: Colors.black54, )),
-                            Spacer(),
+                return Container(
+                    decoration: const BoxDecoration(
+                      color: Colors.white70,
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                    ),
+                    child: Row(
+                      children: [
+                        LoadImage.load(imageUrl: item.mainPic??"", height: 120, width: 120),
+                        const SizedBox(height: 16),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(item.title??""),
+                              Text(item.subTitle??"",maxLines: 2, overflow: TextOverflow.ellipsis,
+                                  style: const TextStyle(fontSize: 13, color: Colors.black54, )),
 
-                            Row(
-                              children: [
-                                Text("¥${item.price.toString()}",
-                                  style: TextStyle(color: Colors.deepOrange,
-                                    fontWeight: FontWeight.bold,),),
-                                Spacer(),
-                                Text("已售${item.sold}件"),
-                              ],
-                            )
-                          ],
+                              const SizedBox(height: 24),
+
+                              Row(
+                                children: [
+                                  Text("¥${item.price.toString()}",
+                                    style: TextStyle(color: Colors.deepOrange,
+                                      fontWeight: FontWeight.bold,),),
+                                  Spacer(),
+                                  Text("已售${item.sold}件"),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-
-                    ],),
+                      ],
+                    )
                 );
               },
           );

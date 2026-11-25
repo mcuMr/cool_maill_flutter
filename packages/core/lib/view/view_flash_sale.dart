@@ -39,30 +39,27 @@ class ViewFlashSale extends StatelessWidget{
           thickness: 1,     // 线条粗细
           color: Colors.black12, // 线条颜色
         ),
-        SizedBox(
-          height: 220,
-          child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: sale.length, // 列表数据数量
-              itemBuilder: (context, index){
-                var item = sale[index];
-                return SizedBox(
-                  width: 160,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                    LoadImage.load(imageUrl: item.mainPic??""),
-                    Text(item.title??""),
-                    Text("¥${item.price.toString()}",
-                      style: TextStyle(color: Colors.deepOrange,
-                        fontWeight: FontWeight.bold,),),
-                  ],),
-                );
-              }
-          ),
-        )
-
-      ],
+    Container(
+      height: 170,
+      child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        separatorBuilder: (context, index) => const VerticalDivider(width: 8,color: Colors.transparent,),
+        itemCount: sale.length, // 列表数据数量
+        itemBuilder: (context, index){
+          var item = sale[index];
+          return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                LoadImage.load(imageUrl: item.mainPic??"",width: 120,height: 120),
+                Text(item.title??""),
+                Text("¥${item.price.toString()}元",
+                  style: TextStyle(color: Colors.deepOrange, fontWeight: FontWeight.bold,),
+                )
+              ]);
+        },
+      ),
+    ),
+       ],
     );
   }
 

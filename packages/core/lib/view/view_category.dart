@@ -18,8 +18,9 @@ class ViewCategory extends StatelessWidget{
           shape: BoxShape.rectangle,
           borderRadius: BorderRadius.all(Radius.circular(8)),
         ),
-        padding: const EdgeInsets.only(left: 8),
+        padding: const EdgeInsets.all(16),
         child: GridView.builder(
+            padding: EdgeInsets.zero,
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),// 禁止滚动
             itemCount: categoryAll.length, // 限制生成数量
@@ -27,6 +28,7 @@ class ViewCategory extends StatelessWidget{
                 crossAxisCount: 5,
                 crossAxisSpacing: 8,
                 mainAxisSpacing: 12,
+              childAspectRatio: 0.8,
             ),
             itemBuilder: (context, index) {
 
@@ -38,6 +40,7 @@ class ViewCategory extends StatelessWidget{
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     LoadImage.load(imageUrl: item.pic??"",width: 48,height: 48),
+                    const SizedBox(height: 4),
                     Text(item.name??"",),
                   ],
                 ),

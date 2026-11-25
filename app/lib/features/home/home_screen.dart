@@ -3,6 +3,7 @@ import 'package:core/model/home/model_home.dart';
 import 'package:core/view/view_banner.dart';
 import 'package:core/view/view_home_search.dart';
 import 'package:core/view/view_category.dart';
+import 'package:core/view/view_all_shop.dart';
 import 'package:core/view/view_flash_sale.dart';
 import 'package:core/view/view_notice_marquee.dart';
 import 'package:core/view/view_title.dart';
@@ -51,6 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 print('跳转到搜索页面');
               },),
 
+                // 轮播图
               SizedBox(height: 16,),
               ViewBanner(
                 banners: _result?.banner ?? [],
@@ -59,9 +61,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
               ),
 
+            // 跑马灯
               SizedBox(height: 16,),
               ViewNoticeMarquee(notices: _result?.coupon??[],),
 
+            // 品类
               SizedBox(height: 16,),
               ViewCategory(
                 categoryAll : _result?.category??[],
@@ -70,15 +74,21 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
               ),
 
+            // 限时精选     
               SizedBox(height: 16,),
               ViewFlashSale(sale:_result?.flashSale??[]),
 
+            // 推荐商品
               SizedBox(height: 16),
               SubTitle(title: '推荐商品',),
+              SizedBox(height: 8),
               ViewRecommend(recommend:_result?.recommend??[]),
 
+            // 全部商品
               SizedBox(height: 16),
               SubTitle(title: '全部商品',),
+              SizedBox(height: 8),
+              ViewAllShop(shopAll:_result?.goods??[])
             ],
           ),
         )
